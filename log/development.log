@@ -1,0 +1,316 @@
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "chats" CASCADE[0m
+  [1m[35m (206.8ms)[0m  [1m[35mCREATE TABLE "chats" ("id" bigserial primary key, "message" text, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (197.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180514202059)[0m
+  [1m[35m (184.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-05 07:30:45.754042"], ["updated_at", "2019-02-05 07:30:45.754042"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "chats" CASCADE[0m
+  [1m[35m (196.0ms)[0m  [1m[35mCREATE TABLE "chats" ("id" bigserial primary key, "message" text, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (199.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (16.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180514202059)[0m
+  [1m[35m (197.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-05 07:30:46.452026"], ["updated_at", "2019-02-05 07:30:46.452026"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-02-05 07:30:46.476738"], ["key", "environment"]]
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4544152773222109110)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4544152773222109110)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-02-05 02:42:01 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChatsController#index as HTML
+  Rendering chats/index.html.erb within layouts/application
+  [1m[36mChat Load (1.0ms)[0m  [1m[34mSELECT "chats".* FROM "chats"[0m
+  Rendered chats/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 15391ms (Views: 15347.7ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:46 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:46.406705"], ["updated_at", "2019-02-05 07:42:46.406705"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.1ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:48 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:48.269183"], ["updated_at", "2019-02-05 07:42:48.269183"]]
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.4ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:48 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:48.766100"], ["updated_at", "2019-02-05 07:42:48.766100"]]
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.6ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:48 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:49.005008"], ["updated_at", "2019-02-05 07:42:49.005008"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 19.0ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:49 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:49.294211"], ["updated_at", "2019-02-05 07:42:49.294211"]]
+  [1m[35m (9.8ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 65.1ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:55 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:55.545667"], ["updated_at", "2019-02-05 07:42:55.545667"]]
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.3ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:55 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:55.742800"], ["updated_at", "2019-02-05 07:42:55.742800"]]
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 4.3ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:55 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.8ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:55.995507"], ["updated_at", "2019-02-05 07:42:55.995507"]]
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 14.9ms)
+
+
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:56 -0500
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:56 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:56.299600"], ["updated_at", "2019-02-05 07:42:56.299600"]]
+  [1m[35m (16.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 93.5ms)
+
+
+  
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+  [1m[35mSQL (127.8ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:56.392147"], ["updated_at", "2019-02-05 07:42:56.392147"]]
+  [1m[35m (10.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 158.6ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:59 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:59.657606"], ["updated_at", "2019-02-05 07:42:59.657606"]]
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.0ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:42:59 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:42:59.867730"], ["updated_at", "2019-02-05 07:42:59.867730"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.4ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:43:00 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:43:00.128611"], ["updated_at", "2019-02-05 07:43:00.128611"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 18.8ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:44:18 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:44:18.959603"], ["updated_at", "2019-02-05 07:44:18.959603"]]
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.7ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:44:19 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:44:19.344556"], ["updated_at", "2019-02-05 07:44:19.344556"]]
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 5.0ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:44:19 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.7ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:44:19.592669"], ["updated_at", "2019-02-05 07:44:19.592669"]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 12.4ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:44:19 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:44:19.835673"], ["updated_at", "2019-02-05 07:44:19.835673"]]
+  [1m[35m (6.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 10.1ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
+Started POST "/chats.json" for 127.0.0.1 at 2019-02-05 02:44:41 -0500
+Processing by ChatsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VifOXzT6tmNpuVGOs8EMV/EKn7R+2fZtGPyBXf1iwSrHBYlNnxJZmPV6L17GU7Kri8EhNnQBbb7Cc3Ak+smrFQ==", "chat"=>{"message"=>"this is my first chat", "username"=>"thing1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "chats" ("message", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["message", "this is my first chat"], ["username", "thing1"], ["created_at", "2019-02-05 07:44:41.715391"], ["updated_at", "2019-02-05 07:44:41.715391"]]
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.6ms)
+
+
+  
+Pusher::ConfigurationError (missing key `app_id' in the client configuration):
+  
+app/models/chat.rb:5:in `notify_pusher'
+app/controllers/chats_controller.rb:15:in `block in create'
+app/controllers/chats_controller.rb:14:in `create'
